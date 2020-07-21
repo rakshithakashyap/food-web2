@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Roboto Slab', serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 1px;
+    
+}
+  
+*{
+    box-sizing:border-box;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 500;color: white;
+}
+html,body{
+    position: relative;
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-text{
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+}
+
+
+/*----------------------------------*/
+
+header{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    padding: 0px 15px;
+    z-index: 11px;
+}
+header.fixed{
+    background-color: rgba(0,0,0,0.9);
+    position: fixed; 
+    border-color: green;
+    animation: fixHeader .5s ease;
+    z-index: 11;
+}
+@keyframes fixHeader{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+div.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*-----------brand------------*/
+div.brand-name a{
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    text-shadow:  7px 1px 15px red;
+    position: relative;
+    font-family: 'Homemade Apple', cursive;
+}
+div.brand-name  a:hover{
+    color: yellow;
+    cursor: pointer;
+}
+header.fixed .brand-name .logo{
+    color:#ffffff;
+    font-family: 'Homemade Apple', cursive;
+}
+
+/*---------------ham----------*/
+.ham-burger .fa{
+    font-size: 30px;
+    height: 30px;
+    width: 35px;
+    background-color:black;
+    color:orange;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    border: none;
+    }
+    
+/*-----------nav-----------------*/
+div.mynavbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div.mynavbar ul li{
+ display: inline-block;
+    padding-right: 80px;
+}
+div.mynavbar ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 50px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+    font-size: 20px;
+}
+header.fixed .mynavbar ul li a{
+color: #ffffff;
+}
+div.mynavbar ul li a::before{
+    content: '';
+    height: 3px;
+/*background-color:white*/
+    width: 0%;
+    position: absolute;
+    right: 0px;
+   bottom: -1px;
+   transition: all.3s ease;
+}
+div.mynavbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+div.mynavbar ul li a.active::before{
+    width: 100%;
+    left: 0;   
+}
+div.mynavbar ul li a:hover,div.mynavbar ul li a.active{
+    color:orange;
+    /* text-shadow:7px 1px 15px greenyellow; */
+
+}
+
+
+/*---------home------------*/
+
+.home{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0)),
+    url(img1.jpg) center/cover no-repeat fixed;
+    min-height: 100vh;
+    margin-top: auto;
+    justify-items: center;
+    text-align: center;
+}
+.home .full-screen{
+    min-height: 100vh;
+}
+
+.home .home-content .blocky{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 50px;
+    padding-left: 3%;
+}
+.home .home-content .blocky h1 {
+color: orange;
+text-transform: capitalize;
+font-size: 70px;
+font-weight: 500;
+margin: 0;
+padding: 0;
+}
+.home .home-content .blocky span{
+    font-size: 90px;
+}
+.home .home-content{
+    flex: 0 0 100%;
+    max-width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+.home .blocky p{
+    color: #ffffff;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+.home .blocky button{
+    background-color: transparent!important;
+    color: orange;
+    border: 1px solid orange;
+    font-size: 20px;
+}
+.home .blocky button:hover{
+    background-color: orange!important;
+    color: #000000;
+}
+
+/* --------about-------- */
+.about{
+    padding: 40px;
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+.about-a{
+    display: flex;
+}
+.about-icon .fas{
+    font-size: 60px;
+    color: orange;
+    margin-right: 20px;
+}
+.about-subtitle{
+    text-transform: capitalize;
+    color: orange;
+    font-size: 25px;
+}
+.about-info{
+    margin-top: 10px;
+    line-height: 1.5;
+    
+}
+.about-icon:hover .fas ,
+.about-subtitle:hover{
+    transition: transform 1s ease, color 1s ease ;
+    transform:translateY(-10px);
+    color:#cd6100;
+    cursor: pointer;
+}
+
+/* ----------menu-------- */
+#menu{
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+#social-icons{
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+.menu-image{
+    min-height: 80vh;
+    background: url(img2.jpg)center/cover fixed no-repeat;
+}
+.menu-text{
+    min-height: 80vh;
+    align-items: center;
+    background: orange;
+    columns: #000000;
+    padding: 40px 0;
+}
+.menu-text h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.menu-text p{
+    margin: 20px 0;
+    line-height: 2;
+}
+.menu-text a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(10,10,10);
+    color: orange;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+.menu-text a:hover{
+    color: orange;
+    background: #ffffff;
+    border: none;
+}
+@media screen and (min-width: 776px){
+    .menu{
+        display: flex;
+    }
+    .menu-text{
+        flex: 0 0 30%;
+    }
+    .menu-image{
+        flex:0 0 70%;
+        clip-path: polygon(0 0,100% 0,50% 100%,0 100%);
+    }
+    .menu{
+        background: orange!important;
+    }
+}
+
+/* --------------social links----- */
+.social-icons{
+    height: 150px;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+.social-icons a{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 40px;
+    border-radius: 5px;
+    transition: transform .5s ease,color .5s ease;
+}
+.social-icons a:hover{
+    transform: translateY(-20px);
+}
+.number{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+    url(img2.jpg) center/cover fixed no-repeat ;
+    padding: 60px 0;
+    color: #ffffff;
+}
+.number p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.number :hover{
+    color: orange!important;
+}
+.number .fas{
+    font-size: 60px;
+    margin: 20px 0;
+}
+.number h3{
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:576px){
+    #numbers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:992px){
+#numbers{
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+
+/* ---------------------foood-------------- */
+
+#food {
+    padding: 20px;
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+.food-container{
+    max-width: 90vw;
+    margin:0 auto;
+}
+.food-card{
+    position: relative;
+     margin: 20px 0;
+    columns: #000000;
+    overflow: hidden;
+    padding: 3px;
+    box-shadow: 1px -8px 20px 1px black;
+}
+
+#food img{
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    transition: transform 2s;
+}
+.img-text{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.img-footer{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0;
+    color: #000000;
+    transition: opacity 2s;
+}
+img-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.food-card:hover img{
+    opacity: 0.4;
+    transform: scale(1.3);
+}
+.food-card:hover .img-text,
+.food-card:hover .img-footer{
+    opacity: 1;
+}
+.food-btn{
+    display: inline-block;
+    background: #000000;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 12px 32px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 180px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    outline: none;
+}
+.food-btn:hover{
+    color: orange;
+    background: #ffffff;
+    border: #000000;
+    outline: none;
+}
+.fas{
+    font-size: 30px;
+}
+
+@media screen and (min-width: 576px){
+    .food-container{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-column-gap:16px;
+    }
+}
+@media screen and (min-width: 992px){
+    .food-container{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        grid-column-gap:16px;
+    }
+}
+
+
+
+/* =======footer========= */
+.footer{
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+.footer .footer-in{
+    padding: 50px;
+}
+/* ---------media quires------- */
+
+
+@media(max-width: 1025px){
+   div.mynavbar ul li a{
+        font-size: 15px;
+    }
+    div.mynavbar ul li {
+        padding-right:50px;
+        text-align: center;
+    }
+    div.brand-name a{
+        font-size: 20px;
+    }
+    .home .home-content .blocky .title{
+        font-size: 40px;
+    }
+    .home .home-content .blocky p{
+        font-size: 20px;
+    }
+    .home .home-content .blocky button{
+        font-size: 18px;
+    }
+    .about .about-text .about-info{
+        font-size: 18px;
+    }
+}
+@media(max-width:925px){
+    header{
+        padding:15px;
+        position: fixed;
+        background-color:rgba(0,0,0,0.9) ;
+        border: none;
+        z-index: 11;
+    }
+    header .brand-name a{
+        color: white;
+        line-height: 20px;
+        text-shadow: px -4px 8px red;
+    }
+    .ham-burger .fa{
+        display: inline-block;
+    }
+    .mynavbar{
+        position: absolute;
+        background-color: rgba(0,0,0,0.9);
+        width: 100%;
+        left: 0px;
+        top: 60px;
+        padding: 15px;
+        border-top:1px solid orange ;
+      display: none;
+    }
+    .mynavbar.show{
+        display: block;
+    }
+    header .mynavbar ul li{
+        display: block;
+        margin-left: 0;
+    }
+    header .mynavbar ul li a{
+        line-height: 42px;
+        color: #ffffff;
+    }
+}
+@media (max-width:430px){
+    .home .home-content .blocky .title {
+        font-size: 25px;
+    }
+    .home .home-content .blocky p{
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:376px){
+    .home .home-content .blocky .title {
+        font-size: 25px;
+    }
+    .home .home-content .blocky p{
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .home .home-content .blocky button{
+        font-size: 15px;
+        padding: 8px;
+    }
+    .about-icon .fas {
+        font-size: 40px;
+    }
+    .about .about-text .about-info {
+    font-size: 12px;
+    }
+    .about .a-hide{
+        display: none;
+    }
+    .title-text{
+        padding: 30px;
+        font-size: 30px;
+    }
+    .menu-text h1 {
+        padding-top: 50px;
+        font-size: 30px;
+    }
+    .menu-text p {
+        line-height: 1.8;
+        font-size: 15px;
+    }
+    .menu-text{
+        padding: 25px;
+    }
+    .menu-text a{
+        font-size: 15px;
+    }
+    .number .fas {
+        font-size: 40px;
+    }
+    .number h3{
+        font-size: 20px;
+    }
+    .number{
+        padding: 30px;
+    }
+    .gallery-container h2{
+        padding-top: 50px;
+    }
+    .social-icons .fa-instagram{
+        display: none;
+    }
+}
+/*
+@media(max-width:1000px){
+    .home .home-content .blocky h1{
+        font-size: 40px;
+    }
+    .home .home-content .blocky span{
+        font-size: 45px;
+    }
+    .cv-btn{
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    .form label{
+        font-size: 20px;
+    }
+}
+@media(max-width:760px){
+    
+    .home .home-content .blocky h1{
+        font-size: 33px;
+    }
+    .home .home-content .blocky span{
+        font-size: 40px;
+    }
+    .cv-btn{
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    
+    .discover .card-columns .card{
+        width: 350px;
+    }
+} */

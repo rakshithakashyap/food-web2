@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+.container.gallery-container{
+    color: #ffffff;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.foodgallery{
+    background-image: linear-gradient(#16191c,#212529eb);
+    
+}
+
+
+.tz-gallery {
+    padding-top: 50px;
+}
+.tz-gallery .lightbox h2{
+    font-family: 'Caveat', cursive;
+    text-transform: capitalize;
+    padding-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(66,266,66);
+    font-size: 2rem;
+}
+.tz-gallery .lightbox p{
+    text-align: center;
+    font-size: 18px;
+}
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container.gallery-container {
+        border-radius: 0;
+    }
+}
+@media(max-width: 400px) {
+.gallery-container h3 {
+    font-size: 30px;
+}
+.gallery-container h2 {
+    font-size: 30px;
+}
+}
+
+
